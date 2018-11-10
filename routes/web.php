@@ -18,7 +18,19 @@ Route::get('/', function () {
 
 Route::get('demoone', 'DemoController@index');
 
-Route::prefix('admin')->group(function () {
+
+
+Route::get('login', 'LoginController@index')->name('login');
+Route::get('logout', 'LoginController@logout');
+Route::post('login', 'LoginController@authenticate');
+
+
+//Route::resource('admin/user', 'Admin\UsersController');
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('user', 'Admin\UsersController');
 });
 
+
+Route::get('register', function() {
+	return App::abort(404);
+})->name('register');

@@ -23,7 +23,7 @@
           <div class="card-body text-dark">
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input class="form-control" id="email" name="email" type="email" value="{{ old('email') ? old('email') : $item->email }}" aria-describedby="emailHelp" placeholder="Enter email">
+                <input class="form-control" id="email" disabled name="email" type="email" value="{{ old('email') ? old('email') : $item->email }}" aria-describedby="emailHelp" placeholder="Enter email">
                 <!--@if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif-->
