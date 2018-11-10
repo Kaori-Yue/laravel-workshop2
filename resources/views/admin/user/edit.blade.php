@@ -14,8 +14,7 @@
 <div class="card mb-3">
   <div class="card-header">Edit User</div>
   <div class="card-body">
-    <!--<form method="POST" action="{{ URL::to('admin/user/'.$item->id) }}">-->
-    <form method="POST" action="#">
+    <form method="POST" action="{{ URL::to('admin/user/'.$item->id) }}">
 
     <div class="card border-dark">
           <div class="card-header">
